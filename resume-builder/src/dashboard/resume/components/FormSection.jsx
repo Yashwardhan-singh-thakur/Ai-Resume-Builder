@@ -1,5 +1,12 @@
-import React from "react";
+import { useContext } from "react";
+import PersonalDetail from "./forms/PersonalDetail";
 
 export default function FormSection() {
-  return <div>Form Section</div>;
+  const { resumeInfo, setResumeInfo } = useContext(ResumeInfoContext);
+  return (
+    <div>
+      Form Section <hr />
+      <PersonalDetail resumeInfo={resumeInfo} />
+    </div>
+  );
 }

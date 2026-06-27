@@ -10,8 +10,8 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 import { useForm } from "react-hook-form";
+import { v4 as uuidv4 } from "uuid";
 import { createNewResume } from "../../../service/GlobalApi.js";
 import { useUser } from "@clerk/react";
 import { Navigate, useNavigate } from "react-router-dom";
@@ -26,17 +26,16 @@ export default function () {
   //   formState: { errors },
   // } = useForm();
   const [openDialog, setOpenDialog] = useState(false);
-  const [resumeTitle, setResumeTitle] = useState();
+  const [resumeTitle, setResumeTitle] = useState("");
   const [loading, setLoading] = useState(false);
   const navigation = useNavigate();
 
   async function onCreate() {
     try {
       setLoading(true);
-
       const data = {
         title: resumeTitle,
-        resumeId: uuid,
+        resumeId: uuidv4(),
         userEmail: user?.primaryEmailAddress?.emailAddress,
         userName: user?.fullName,
       };

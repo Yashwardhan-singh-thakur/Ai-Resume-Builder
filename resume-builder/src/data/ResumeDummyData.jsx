@@ -1,11 +1,11 @@
 const resumeDummyData = {
   firstName: "Yashwardhan",
   lastName: "Thakur",
-  jobTitle: "Frontend Developer",
+  jobTitle: "Full stack Developer",
   address: "Sehore, Madhya Pradesh, India",
-  phone: "+91 98765 43210",
-  email: "yashwardhan@example.com",
-  themeColor: "#2563eb",
+  phone: "+91 8815598449",
+  email: "yashwardhan@gmail.com",
+  themeColor: "#D65202",
   summery:
     "Creative frontend developer with experience building responsive web applications using React, JavaScript, HTML, CSS, and modern UI tools.",
 
@@ -16,8 +16,8 @@ const resumeDummyData = {
       companyName: "Tech Solutions Pvt Ltd",
       city: "Bhopal",
       state: "Madhya Pradesh",
-      startDate: "2025-01-01",
-      endDate: "2025-06-30",
+      startDate: "Jan 2025",
+      endDate: "Apr 2025",
       currentlyWorking: false,
       workSummery:
         "Created responsive React components, fixed UI issues, worked with API data, and improved user interface layouts.",
@@ -28,7 +28,7 @@ const resumeDummyData = {
       companyName: "CodeCraft Studio",
       city: "Indore",
       state: "Madhya Pradesh",
-      startDate: "2025-07-01",
+      startDate: "May 2025",
       endDate: "",
       currentlyWorking: true,
       workSummery:
@@ -39,13 +39,23 @@ const resumeDummyData = {
   education: [
     {
       id: 1,
-      universityName: "Barkatullah University",
+      universityName: "Vellore institute of technology",
       degree: "Bachelor of Business Administration",
       major: "Business Administration",
-      startDate: "2019-07-01",
-      endDate: "2022-06-30",
+      startDate: "jan 2020",
+      endDate: "Sep 2023",
       description:
         "Completed graduation with focus on business management, communication, and problem-solving.",
+    },
+    {
+      id: 2,
+      universityName: "Expert Coumputer Astha",
+      degree: "PGDCA",
+      major: "Computer",
+      startDate: "jan 2026",
+      endDate: "",
+      description:
+        "Pursuing PGDCA with a focus on computer applications, programming fundamentals, database management, and practical software skills.",
     },
   ],
 
