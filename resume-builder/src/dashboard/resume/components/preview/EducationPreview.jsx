@@ -19,9 +19,11 @@ export default function EducationPreview({ resumeInfo }) {
             {edu?.universityName}
           </h2>
           <h2 className="text-xs flex justify-between">
-            {edu?.degree} in {edu?.major},
+            {edu?.degree} {edu?.major ? `in ${edu?.major}` : null}
             <span>
-              {edu?.startDate} - {edu?.endDate ? edu?.endDate : "Present"}
+              {edu?.startDate || edu?.endDate
+                ? `${edu?.startDate} -  ${edu?.endDate ? edu?.endDate : "Present"}`
+                : null}
             </span>
           </h2>
           <p className="text-xs my-2">{edu?.description}</p>

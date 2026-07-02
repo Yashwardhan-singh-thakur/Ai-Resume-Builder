@@ -25,7 +25,7 @@ export default function Dashboard() {
       <h2 className="font-bold text-3xl"> My Resume</h2>
       <p>Start Creating Ai resume for your next job role</p>
       <div className="flex">
-        <div className="grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 mt-10 w-full">
           <AddResume />
           {allResume.length > 0 &&
             allResume.map((resume, i) => (

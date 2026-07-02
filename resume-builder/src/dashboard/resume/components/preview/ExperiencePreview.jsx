@@ -19,13 +19,18 @@ export default function ExperiencePreview({ resumeInfo }) {
             {exp?.title}
           </h2>
           <h2 className="text-xs flex justify-between">
-            {exp?.companyName}, {exp?.city}, {exp?.state},
+            {exp?.companyName ? `${exp?.companyName},` : null}
+            {exp?.city || exp?.state ? ` ${exp?.city}, ${exp?.state}` : null}
+
             <span>
-              {exp?.startDate} -{" "}
+              {exp?.startDate} {exp?.startDate && "- "}
               {exp?.currentlyWorking ? "Present" : exp?.endDate}
             </span>
           </h2>
-          <p className="text-xs my-2">{exp?.workSummery}</p>
+          <p
+            className="text-xs my-2"
+            dangerouslySetInnerHTML={{ __html: exp?.workSummery }}
+          />
         </div>
       ))}
     </div>

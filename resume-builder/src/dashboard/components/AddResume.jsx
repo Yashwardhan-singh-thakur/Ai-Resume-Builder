@@ -42,7 +42,9 @@ export default function () {
       let res = await createNewResume(data);
       if (res) {
         setLoading(false);
-        return navigation(`/dashboard/resume/${res.documentId}/edit`);
+        return navigation(
+          `/dashboard/resume/${res?.data.data.documentId}/edit`,
+        );
       }
     } catch (err) {
       setLoading(false);
@@ -51,12 +53,11 @@ export default function () {
   }
 
   return (
-    <div>
-      <div
-        className="p-14 py-24 px-22 border flex justify-center bg-secondary rounded-lg  items-center
-      hover:scale-105 transition-all hover:shadow-xs cursor-pointer h-[280px]"
-        onClick={() => setOpenDialog(true)}
-      >
+    <div
+      className="px-14 w-full py-24 border-red-500  flex justify-center bg-secondary rounded-lg  items-center
+      hover:scale-[1.05] transition-all hover:shadow-xs cursor-pointer h-[280px]"
+    >
+      <div onClick={() => setOpenDialog(true)}>
         <PlusSquare />
       </div>
       <Dialog open={openDialog}>

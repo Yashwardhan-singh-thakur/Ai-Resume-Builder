@@ -18,4 +18,12 @@ function getUserResume(userEmail) {
   return axiosClient.get(`/user-resumes?filters[userEmail][$eq]=${userEmail}`);
 }
 
-export { createNewResume, getUserResume };
+function UpdateResumeDetail(id, data) {
+  return axiosClient.put(`/user-resumes/${id}`, { data: data });
+}
+
+function GetResumeDetail(id) {
+  return axiosClient.get(`/user-resumes?filters[documentId][$eq]=${id}`);
+}
+
+export { createNewResume, getUserResume, UpdateResumeDetail, GetResumeDetail };
