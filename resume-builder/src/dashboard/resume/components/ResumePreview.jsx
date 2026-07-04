@@ -14,10 +14,19 @@ export default function ResumePreview() {
   async function getResume() {
     const { resumeId } = params;
     let res = await GetResumeDetail(resumeId);
-
+    console.log(res);
     if (res) {
-      const { firstName, lastName, jobTitle, address, phone, email, summery } =
-        res.data.data[0];
+      const {
+        firstName,
+        lastName,
+        jobTitle,
+        address,
+        phone,
+        email,
+        summery,
+        experience,
+        education,
+      } = res.data.data[0];
       setResumeInfo((prev) => ({
         ...prev,
         firstName: firstName,
@@ -27,6 +36,8 @@ export default function ResumePreview() {
         phone: phone,
         email: email,
         summery: summery,
+        experience: experience ? experience : ["Experience nothing came"],
+        education: education ? education : ["Education nothing came"],
       }));
     }
   }

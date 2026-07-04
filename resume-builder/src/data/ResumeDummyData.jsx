@@ -18,7 +18,6 @@ const resumeDummyData = {
       state: "Madhya Pradesh",
       startDate: "Jan 2025",
       endDate: "Apr 2025",
-      currentlyWorking: false,
       workSummery:
         "Created responsive React components, fixed UI issues, worked with API data, and improved user interface layouts.",
     },

@@ -25,7 +25,8 @@
       "type": "string"
     },
     "workSummery": {
-      "type": "text"
+      "type": "richtext",
+      "required": false
     }
   },
   "config": {}
